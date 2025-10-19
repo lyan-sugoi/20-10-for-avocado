@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lá thư 20/10 tặng em 💌</title>
+<style>
+body {
+  background-color: #fbeff3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* === PHONG BÌ TRẮNG === */
+.envelope {
+  position: relative;
+  width: 500px; /* tăng từ 320px lên 500px */
+  height: 280px; /* tăng chiều cao */
+  background: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.envelope:hover {
+  transform: scale(1.03);
+}
+
+/* NẮP PHONG BÌ */
+.envelope::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 250px solid transparent;  /* tăng để khớp với chiều rộng mới */
+  border-right: 250px solid transparent;
+  border-bottom: 140px solid #ffffff;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.05);
+  transform-origin: bottom;
+  transition: transform 0.8s ease;
+}
+.envelope.open::before {
+  transform: rotateX(180deg);
+}
+
+/* LÁ THƯ BÊN TRONG */
+.letter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(80px);
+  width: 440px; /* rộng hơn để dễ đọc */
+  height: 240px;
+  background: #fff;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 1.2s ease;
+  overflow-y: auto;
+  padding: 25px;
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+.envelope.open .letter {
+  transform: translate(-50%, -50%) translateY(-30px);
+  opacity: 1;
+}
+
+/* === NỘI DUNG LÁ THƯ === */
+#letter-screen h2 {
+  color: #4CAF50;
+  font-size: 1.7em;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f8bbd0;
+  padding-bottom: 8px;
+}
+.greeting {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.paragraph {
+  margin-bottom: 12px;
+  text-align: justify;
+  color: #333;
+}
+.highlight {
+  font-weight: bold;
+  color: #4CAF50;
+}
+.signature {
+  margin-top: 25px;
+  text-align: right;
+  font-style: italic;
+  border-top: 1px dashed #f8bbd0;
+  padding-top: 10px;
+}
+
+/* === SCROLL THANH THƯ === */
+.letter::-webkit-scrollbar {
+  width: 6px;
+}
+.letter::-webkit-scrollbar-thumb {
+  background-color: #f8bbd0;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="envelope" id="envelope">
+  <div class="letter" id="letter">
+    <div id="letter-screen">
+      <h2>💖 Chúc Mừng Ngày 20/10 💖</h2>
+
+      <p class="greeting">Gửi mai đẹt ti ni yêu thương nhất của anh!</p>
+
+      <p class="paragraph">
+        Hôm nay là 20/10, ngày mà cả thế giới công nhận, và anh cũng chúc mừng cả thế giới, ý anh là,
+        <span class="highlight">thế giới</span> của anh, is you. Anh mong rằng, khi em đọc những dòng chữ này, em có thể cảm nhận được trọn vẹn tình yêu và sự
+        trân trọng mà anh dành cho em.
+      </p>
+
+      <p class="paragraph">
+        Anh nhớ những ngày đầu tiên, nụ cười, giọng nói của em đã làm dao động trái tim anh như
+        thế nào. Và cho đến tận bây giờ, sau biết bao nhiêu kỉ niệm, nụ cười, giọng nói ấy vẫn
+        là điều tuyệt vời nhất mà anh mong được nghe mỗi ngày. Em là người đã biến
+        những ngày bình thường của anh trở nên đặc biệt, biến những khó khăn thành
+        động lực, và biến mọi sự vô vị thành <span class="highlight">ý nghĩa</span>.
+      </p>
+
+      <p class="paragraph">
+        Em biết không, điều anh yêu nhất ở em không chỉ là vẻ ngoài xinh đẹp, mà còn
+        là <span class="highlight">sự mạnh mẽ</span> tiềm ẩn bên trong, là
+        <span class="highlight">sự dịu dàng</span> em dành cho mọi người ( có thể không nhưng ít nhất dành cho anh hehe ), và cả
+        <span class="highlight">sự kiên nhẫn</span> khi đối diện với những
+        điều chưa hoàn hảo của anh ( yea em nói em không patient nhưng anh thấy em lại patient với anh, anh happy lắm ). Mỗi khi em quan tâm anh bằng những điều nhỏ nhặt
+        nhất, anh lại thấy tim mình ấm áp vô cùng, và thầm nghĩ: "mình thật may mắn
+        khi có cô ấy bên cạnh" .
+      </p>
+
+      <p class="paragraph">
+        Cảm ơn em đã cùng anh bước đi trên chặng đường đã qua. Anh trân trọng từng
+        khoảnh khắc chúng ta chia sẻ: từ "những buổi hẹn hò lãng mạn" ( chú thích những buổi hẹn hò lãng mạn: những lúc chơi game cùng ) đến những đêm
+        thức khuya tâm sự cùng nhau. Mỗi kỉ niệm đều là một viên gạch nhỏ, xây nên
+        một ngôi nhà hạnh phúc, vững chắc dành cho hai chúng ta.
+      </p>
+
+      <p class="paragraph">
+        Anh biết đôi khi cuộc sống có thể bận rộn và nhiều áp lực, nhưng anh sẽ
+        luôn là <span class="highlight">người lắng nghe</span> em, là
+        <span class="highlight">người ủng hộ</span> mạnh mẽ nhất, và là
+        <span class="highlight">bờ vai</span> vững chắc để em tựa vào bất cứ lúc
+        nào.
+      </p>
+
+      <p class="paragraph">
+        Ngày 20/10 này, anh không chỉ chúc em những điều tốt đẹp, mà còn muốn đặt
+        một lời khẳng định. Anh khẳng định sẽ không ngừng nỗ lực để mang lại hạnh phúc và sự bình
+        yên cho em, để em luôn cảm thấy mình được yêu thương, được trân trọng và
+        <span class="highlight">xứng đáng</span> với mọi điều tuyệt vời nhất trên
+        đời. Anh mong chờ được cùng em thực hiện tất cả những ước mơ còn dang dở và
+        cùng nhau già đi.
+      </p>
+
+      <div class="signature">
+        <p>
+          Chúc mừng Ngày Phụ nữ Việt Nam, người phụ nữ đặc biệt và duy nhất của cuộc
+          đời anh ( đừng bắt bẻ anh là còn mẹ thì sao nhé, vì tình yêu mẹ con khác ).
+        </p>
+        <p>Luôn yêu em,</p>
+        <p><strong>Trần Thế Vinh</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('envelope').addEventListener('click', function() {
+  this.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>
